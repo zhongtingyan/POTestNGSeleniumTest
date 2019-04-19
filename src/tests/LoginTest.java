@@ -20,7 +20,7 @@ public class LoginTest extends BaseTest {
 	public void invalidLoginTest_InvalidUserNameInvalidPassword() {
 		HomePage  homepage = new HomePage(driver);
 		
-		homepage.goToN11().goToLoginPage().loginToZhihu("zxy.zty@qq.com", "zty97717").verifyLoginPassword("账号或密码错误");
+		homepage.goToN11().goToLoginPage().loginToZhihu("email@qq.com", "password").verifyLoginPassword("账号或密码错误");
 	}
 	
 	/**

@@ -19,13 +19,15 @@ public class BasePage {
 
 	public BasePage(WebDriver driver) {
 		super();
+		//15表示：最长等待15秒，15秒后执行下一步操作
 		wait = new WebDriverWait(driver, 15);
+		
 		//这个一定要写，不然会报空指针错误
 		this.driver = driver;
 		System.out.println("BasePage构造方法");
 	}
 	
-	//休眠
+	//显示等待
 	public void waitVisibility(By elementBy) {
 		wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(elementBy));
 	}
